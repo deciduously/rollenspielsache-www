@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useForm } from '../customHooks';
+import { useForm } from '../../customHooks';
 
 function Roller() {
     // TODO WRAP THIS ALL UP SOMEWHERE ELSE
@@ -23,7 +23,7 @@ function Roller() {
                 <button type="submit">Roll!</button>
             </form>
             <ul>
-                {results.map(r => <li>{r}</li>)}
+                {results.map((r, i) => <li key={i}>{r}</li>).reverse()}
             </ul>
         </div>
     )

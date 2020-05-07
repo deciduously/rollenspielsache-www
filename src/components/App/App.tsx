@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Info from '../Info/Info';
 import Roller from '../Roller/Roller';
 
