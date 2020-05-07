@@ -1,6 +1,6 @@
 <div class="info">
   <p>
-    The Rollenspielsache is a set of module tools for managing tabletop RPG
+    The Rollenspielsache is a set of modular tools for managing tabletop RPG
     sessions.
   </p>
   <p>Components:</p>

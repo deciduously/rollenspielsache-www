@@ -11,7 +11,6 @@
 <script>
   import { onMount } from 'svelte';
 
-  export let name = 'Anonymous';
   let time = new Date();
 
   onMount(() => {
