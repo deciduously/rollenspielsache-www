@@ -1,9 +1,32 @@
-export interface RollenspielsacheComponent {
-    name: string;
-    description: string;
-    url?: string;
-}
+<div class="info">
+  <p>
+    The Rollenspielsache is a set of module tools for managing tabletop RPG
+    sessions.
+  </p>
+  <p>Components:</p>
+  <ul>
+    {#each parts as { name, description, url }}
+      <li>
+      {#if url}
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          <code class="component-name">{name}</code>
+        </a>
+      {:else}
+        <code class="component-name">{name}</code>
+      {/if}
+      <span>- {description}</span>
+      </li>
+    {/each}
+  </ul>
+</div>
 
+<style>
+.component-name {
+  font-weight: bold;
+}
+</style>
+
+<script>
 export const parts = [{
     name: 'librollenspielsache',
     description: 'Rust crate with C-compatible API with core types and logic',
@@ -41,3 +64,4 @@ export const parts = [{
     description: 'Roll20 integration (Planned)'
 }
 ];
+</script>
