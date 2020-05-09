@@ -1,7 +1,7 @@
 class Server {
     constructor(host, port) {
         this.host = host;
-        this.port = port || "";
+        this.port = port;
         console.log(`Using API server ${host}`);
     }
     url() {
@@ -13,4 +13,4 @@ class Server {
     }
 }
 
-export const APIServer = new Server(process.env.API_HOST, process.env.API_HOST);
+export const APIServer = new Server(process.env.API_HOST, process.env.API_PORT);
