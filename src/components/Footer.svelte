@@ -4,11 +4,9 @@
 
 <footer>
   Built on
-  <Link text="Svelte.js" url="https://svelte.dev/" />
+  <Link url="https://svelte.dev/">Svelte.js</Link>
     -
-  <Link text="Sinatra" url="http://sinatrarb.com" />
-    -
-  <Link text="Rust" url="https://www.rust-lang.org/" />
+  <Link url="https://actix.rs/">Actix.rs</Link>
     |
-  <Link text="Source Code" url="https://github.com/deciduously/rollenspielsache-www" />
+  <Link url="https://github.com/deciduously/rollenspielsache-www">Source Code</Link>
 </footer>

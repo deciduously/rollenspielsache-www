@@ -3,13 +3,13 @@
     Roll:
   <input placeholder="1d6" bind:value={input_text} />
   </label>
-  <button on:click {buttonClicked}>Roll!</button>
+  <button on:click={buttonClicked}>Roll!</button>
   <ul>
-      {#each results as { total, base, modifier }}
+      {#each results as { base, offset }}
         <li>
-          <span class="roll-total">{total}</span> (<span class="roll-base">{base}</span>
+          <span class="roll-total">{base + offset}</span> (<span class="roll-base">{base}</span>
           +
-          <span class="roll-modifier">{modifier}</span>)
+          <span class="roll-modifier">{offset}</span>)
         </li>
       {/each}
   </ul>
@@ -19,13 +19,16 @@
 </style>
 
 <script>
+import { APIServer } from '../lib/server';
+
 export let results = []
 export let input_text = "";
-export const buttonClicked = (_) => {
-    console.log(`Rolling ${input}...`)
-    fetch(endpoint + input)
+export const buttonClicked = (evt) => {
+    console.log(`Rolling ${input_text}...`)
+    console.log(results)
+    fetch(APIServer.rollEndpoint() + input_text)
         .then(response => response.json())
-        .then(data => results.push(data))
+        .then(data => results = results.concat(data))
 }
 
 </script>
