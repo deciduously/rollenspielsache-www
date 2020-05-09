@@ -26,7 +26,7 @@ export let input_text = "";
 export const buttonClicked = (evt) => {
     console.log(`Rolling ${input_text}...`)
     console.log(results)
-    fetch(APIServer.rollEndpoint() + input_text)
+    fetch(APIServer.roll(input_text))
         .then(response => response.json())
         .then(data => results = results.concat(data))
 }

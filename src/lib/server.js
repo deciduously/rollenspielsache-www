@@ -6,10 +6,10 @@ class Server {
     }
     url() {
         const prefix = process.env.NODE_ENV === 'production' ? 'https' : 'http'
-        return `${prefix}://${this.host}:${this.port}/`
+        return `${prefix}://${this.host}:${this.port}`
     }
-    rollEndpoint() {
-        return `${this.url()}roll/`
+    roll(input) {
+        return `${this.url()}/roll/${input}`
     }
 }
 
