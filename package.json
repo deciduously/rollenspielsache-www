@@ -15,7 +15,7 @@
     "postcss": "^7.0.29",
     "postcss-cli": "^7.1.1",
     "standard": "^14.3.3",
-    "svelte": "^3.0.0",
+    "svelte": "^3.49.0",
     "tailwindcss": "^1.4.6"
   },
   "dependencies": {}
